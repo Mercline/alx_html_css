@@ -1,4 +1,13 @@
+/* styles.css */
+        
+        /* Logo styles */
 
+        .logo {
+            font-size: 2rem; 
+            color: white;
+            margin-right: 15px;
+            display: inline-block;
+        }
 body {
     display: flex;
     flex-direction: column;

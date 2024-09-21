@@ -1,0 +1,57 @@
+/* styles.css */
+        
+        /* Logo styles */
+
+        .logo {
+            font-size: 2rem; 
+            color: white;
+            margin-right: 15px;
+            display: inline-block;
+        }
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; 
+}
+
+header, footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #007BFF;
+    color: white; 
+    border-bottom: 2px solid #0056b3;
+
+}
+
+article {
+    flex: 2; 
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+}
+
+
+aside {
+    flex: 1; 
+    padding: 10px;
+    margin: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+}

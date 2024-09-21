@@ -72,6 +72,51 @@ section p {
     margin-bottom: 20px;
 }
 
+.quote-section {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 40px; /* Spacing around the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Margin above and below */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.quote-section img {
+    height: 80px; /* Adjust size for the image */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.quote-content {
+    flex: 1; /* Allow text block to take remaining space */
+}
+
+.quote-content blockquote {
+    font-size: 1.5em; /* Adjust quote size */
+    color: #555; /* Color for the quote */
+    margin: 0; /* Remove default margins */
+    quotes: "“" "”" "‘" "’"; /* Custom quotes */
+}
+
+.quote-content blockquote:before {
+    content: open-quote; /* Open quote */
+}
+
+.quote-content blockquote:after {
+    content: close-quote; /* Close quote */
+}
+
+.quote-author {
+    font-weight: bold; /* Bold for the author */
+    margin-top: 10px; /* Space above author name */
+}
+
+.quote-text {
+    color: #777; /* Lighter color for additional text */
+    margin-top: 5px; /* Space above text */
+}
+
 article {
     flex: 2;
     background-color: #f4f4f4;

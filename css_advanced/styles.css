@@ -309,10 +309,42 @@ article a:hover, aside a:hover {
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+    background-color: #333; /* Background color for the footer */
+    color: white; /* Text color */
+    padding: 40px; /* Spacing inside the footer */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.footer-row {
+    display: flex; /* Flexbox for row layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Limit maximum width */
+}
+
+.footer-row img.logo {
+    height: 50px; /* Adjust logo size */
+}
+
+.footer-links {
+    display: flex; /* Flexbox for links layout */
+    gap: 15px; /* Space between links */
+}
+
+.footer-links img {
+    height: 30px; /* Adjust size for social icons */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.footer-text {
+    margin-top: 20px; /* Space above the text */
+    text-align: center; /* Center the text */
+    font-size: 0.9em; /* Font size for footer text */
+    color: #ccc; /* Lighter color for footer text */
 }
 
 @media (max-width: 768px) {
@@ -324,12 +356,17 @@ footer {
         margin-right: 0;
         margin-bottom: 10px;
     }
-    
+
     .membership-item {
         flex: 1 1 calc(50% - 20px); /* Adjust for smaller screens */
     }
 
     .faq-row {
         flex: 1 1 calc(100% - 20px); /* Stack items on smaller screens */
+    }
+
+    .footer-row {
+        flex-direction: column; /* Stack footer items on smaller screens */
+        align-items: center; /* Center items */
     }
 }

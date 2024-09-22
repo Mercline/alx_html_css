@@ -117,6 +117,80 @@ section p {
     margin-top: 5px; /* Space above text */
 }
 
+.videos-section {
+    padding: 40px; /* Spacing around the section */
+    background-color: #ffffff; /* Background color for the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Margin above and below */
+}
+
+.videos-section h2 {
+    color: #333; /* Color for the heading */
+    font-size: 2em; /* Size of the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.video-block {
+    display: flex; /* Flexbox for layout */
+    margin-bottom: 20px; /* Space between video blocks */
+}
+
+.video-block img {
+    width: 120px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.video-content {
+    flex: 1; /* Allow content to take remaining space */
+}
+
+.video-content h3 {
+    color: #444; /* Color for the video title */
+    font-size: 1.5em; /* Size of the video title */
+    margin: 0; /* Remove default margins */
+}
+
+.video-content p {
+    color: #666; /* Color for the video text */
+    margin: 5px 0; /* Space above and below the text */
+}
+
+.author-block {
+    display: flex; /* Flexbox for author layout */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Space above the author block */
+}
+
+.author-block img {
+    width: 30px; /* Size for author image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    margin-right: 10px; /* Space between image and author name */
+}
+
+.author-name {
+    font-weight: bold; /* Bold for author name */
+}
+
+.rating-block {
+    display: flex; /* Flexbox for rating layout */
+    align-items: center; /* Center items vertically */
+    margin-top: 5px; /* Space above rating block */
+}
+
+.rating-block img {
+    width: 20px; /* Size for star image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.rating-text {
+    margin-left: 5px; /* Space between stars and rating text */
+    color: #666; /* Color for rating text */
+}
+
 article {
     flex: 2;
     background-color: #f4f4f4;

@@ -1,0 +1,123 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #3498db;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header/Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Navigation Styles */
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Desktop Navigation */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    /* Styles for laptops */
+    .menu-toggle {
+        display: block; /* Show button on smaller laptops */
+        margin: 10px;
+    }
+
+    .nav-list {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--primary-color);
+        width: 100%;
+        z-index: 1000; /* Ensure it is above other content */
+    }
+
+    .nav-list.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-list li {
+        margin: 10px 0; /* Vertical spacing */
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Styles for desktops */
+    .menu-toggle {
+        display: none; /* Hide on larger desktops */
+    }
+
+    .nav-list {
+        display: flex; /* Show normally on desktops */
+    }
+
+    .nav-list li {
+        margin: 0 15px; /* Maintain horizontal spacing */
+    }
+}

@@ -25,6 +25,14 @@ body {
     color: white;
     text-align: center;
     padding: 50px 20px;
+    position: relative; /* Enable positioning for the image */
+}
+
+.hero-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin: 0 auto 20px; /* Add bottom margin */
 }
 
 .container {

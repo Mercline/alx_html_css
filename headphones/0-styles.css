@@ -1,131 +1,170 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Source Sans Pro";
 }
 
-/* Variables */
 :root {
-    --primary-color: #3498db;
-    --text-color: #333;
-    --background-color: #f4f4f4;
+    --text-color: #ffffff;
+    --secondary-text-color: #000000;
+    --main-color: #FF6565;
 }
 
-/* Body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+/* Styling the Hero section */
+.hero-section {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    background-image: url("./images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 8rem;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding:1rem 8rem;
+    justify-content: space-between;
+
+}
+
+nav {
+    display: flex;
+}
+
+
+ul {
+    display: flex;
+    color: var(--text-color);
+    gap: 2rem;
+}
+
+a {
+    color: #ffffff;
+}
+
+#hamburger {
+    color: var(--text-color);
+    display: none;
+}
+
+@media (max-width:1280px) {
+    header {
+        padding: 14px;
+        transition: .2s;
+    }
+    nav a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #hamburger {
+        display: block;
+    }
+
+    .navbar {
+        position:absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover {
+        color: var(--secondary-text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active {
+        color: var(--text-color);
+    }
+
+    .navbar.open {
+        right: 2%;
+    }
+}
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+h2 {
+    padding-top: 60%;
     color: var(--text-color);
 }
 
-/* Header/Hero Section */
-.hero {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    position: relative; /* Enable positioning for the image */
-}
-
-.hero-image {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Center the image */
-    margin: 0 auto 20px; /* Add bottom margin */
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
 p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: var(--text-color);
+   
 }
 
-/* Navigation Styles */
-nav {
-    position: relative;
-}
-
-.menu-toggle {
-    display: none; /* Hidden on larger screens */
-    font-size: 1.5em;
-    background: none;
+button {
+    padding: 0.5rem 1rem;
     border: none;
-    color: white;
-    cursor: pointer;
+    border-radius: 50px;
+    color: var(--text-color);
+    background-color: var(--main-color);
 }
 
-/* Desktop Navigation */
-.nav-list {
-    list-style: none;
-    padding: 0;
+.main-hero-text {
+    padding-top: 2rem;
+}
+
+/* To create shadow effecct on the text before the button */
+/* .minor-hero-text {
+    text-shadow: 2px solid #000000;
+} */
+
+/* Styling what-we-do-section */
+/* .what-we-do {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem;
+
+} */
+/* .icons {
+    gap: 1rem;
+} */
+/* .icon-text {
+    color: var(--secondary-text-color);
+    text-align: center;
+    
+} */
+
+/* .what-we-do-icons {
+    padding-top: 4rem;
+    display: flex;
+    gap: 2rem;
 }
 
-.nav-list li {
-    margin: 0 15px;
+h4 {
+    padding-bottom: 1rem;
 }
 
-.nav-list a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-list a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    /* Styles for laptops */
-    .menu-toggle {
-        display: block; /* Show button on smaller laptops */
-        margin: 10px;
-    }
-
-    .nav-list {
-        display: none; /* Hide by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: var(--primary-color);
-        width: 100%;
-        z-index: 1000; /* Ensure it is above other content */
-    }
-
-    .nav-list.active {
-        display: flex; /* Show when active */
-    }
-
-    .nav-list li {
-        margin: 10px 0; /* Vertical spacing */
-    }
-}
-
-@media (min-width: 1025px) {
-    /* Styles for desktops */
-    .menu-toggle {
-        display: none; /* Hide on larger desktops */
-    }
-
-    .nav-list {
-        display: flex; /* Show normally on desktops */
-    }
-
-    .nav-list li {
-        margin: 0 15px; /* Maintain horizontal spacing */
-    }
-}
+h3 {
+    padding-bottom: 1rem;
+} */

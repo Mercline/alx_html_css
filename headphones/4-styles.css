@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('./images/hero-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.minor-hero-text {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4500; /* Darker tomato */
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff6347;
+}
+
+/* What We Do Section */
+.what-we-do {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.what-we-do h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.what-we-do-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.icons {
+    width: 22%; /* Adjust to your preference */
+    margin: 15px;
+    text-align: center;
+}
+
+.icons img {
+    width: 80px; /* Set a fixed size for icons */
+    height: auto;
+}
+
+.icon-text {
+    font-size: 0.9rem;
+}
+
+/* Our Results Section */
+.our-results {
+    padding: 50px 20px;
+}
+
+.our-results h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.our-results-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.our-results-images div {
+    margin: 15px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .what-we-do-icons, .our-results-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons, .our-results-images div {
+        width: 80%; /* Adjust width for mobile */
+    }
+}
